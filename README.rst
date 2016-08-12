@@ -6,14 +6,16 @@ Install
 =======
 ::
 
-   pip install ScrapyElasticSearch
+    pip install ScrapyElasticSearch
 
 Usage (Configure settings.py:)
 ----------------------
+
 ::
-   ITEM_PIPELINES = [
-       'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline',
-   ]
+
+   ITEM_PIPELINES = {
+       'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 500,
+   }
 
    ELASTICSEARCH_SERVERS = ['localhost']
    ELASTICSEARCH_INDEX = 'scrapy'
